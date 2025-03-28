@@ -1,93 +1,4 @@
-<html><body><h1>Website</h1>
-
-<p>This website is built using <a href="https://docusaurus.io/">Docusaurus 2</a>, a modern static website generator.</p>
-
-<h3>Installation</h3>
-
-<p><code>
-$ yarn
-</code></p>
-
-<h3>Local Development</h3>
-
-<p><code>
-$ yarn docs:start
-</code></p>
-
-<p>This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.</p>
-
-<p>Note:</p>
-
-<ul>
-<li>Changes does not appear on snoodev env can only be tested locally</li>
-</ul>
-
-<h3>Build</h3>
-
-<p><code>
-$ yarn docs:build
-</code></p>
-
-<p>This command generates static content into the <code>build</code> directory and can be served using any static contents hosting service.</p>
-
-<h3>Development lifecycle</h3>
-
-<p>For small doc updates you can skip the deployment phase.</p>
-
-<p>Once you have your PR approved, make sure to add <code>[CI SKIP]</code> to your commit message in GitHub.
-More info in <a href="https://docs.drone.io/pipeline/skipping/">Drone documentation for skipping</a>.</p>
-
-<p>Now you can merge your PR.</p>
-
-<p>Important: do not use <code>[CI SKIP]</code> when you <code>git commit</code> since your PR will be stuck in pending state.
-You only need to add it immediately before merging the PR.</p>
-
-<h3>Update the versioned docs</h3>
-
-<p>If you want to update the versioned docs <em>without</em> doing an <a href="../docs/publishing.md">NPM package update</a>, create a new branch, run the <code>docs:update-versioned</code> task like so, from the repo root:</p>
-
-<p><code>
-git checkout main
-git pull                                # Pull down the latest repository updates
-git submodule update --init --recursive # Make sure submodules are in the right state
-git checkout -b update-versioned-docs   # Start a new branch
-yarn docs:update-versioned              # Update the versioned docs for the current version
-git push origin update-versioned-docs   # Push the branch to start a PR.
-</code></p>
-
-<p>Then follow the link printed out to create a pull request.</p>
-
-<h3>Updating Firehose docs</h3>
-
-<p>Firehose docs are auto-generated from source code, and the source has been moved to <a href="https://github.snooguts.net/reddit/devplatform-api">another repository</a>. So to update the firehose docs, the best way is to make changes there, and then re-generate the docs here.</p>
-
-<ol>
-<li><p>Make sure you have both repositories (<a href="https://github.snooguts.net/reddit/reddit-devplatform-monorepo">monorepo</a> and <a href="https://github.snooguts.net/reddit/devplatform-api">devplatform-api</a>) checked out as siblings, i.e. sharing the parent folder</p></li>
-<li><p>In <a href="https://github.snooguts.net/reddit/devplatform-api">reddit/devplatform-api</a>:</p>
-
-<p>a) Go to and make changes to <code>.proto</code> files</p>
-
-<p>b) Run <code>make protos</code> in the root of the project when done</p>
-
-<p>c) Submit your changes and create a PR</p>
-
-<p>d) Once PR is approved and comments are addressed, go to <a href="https://reddit.enterprise.slack.com/archives/C062RC9K8JV">#devplatform-firehose-salon</a> on Slack and release your PR by using @Harold to acquire a turn in merging your changes</p>
-
-<p>e) Once your changes are merged, go back to the monorepo</p></li>
-<li><p>In <a href="https://github.snooguts.net/reddit/reddit-devplatform-monorepo">reddit/reddit-devplatform-monorepo</a></p>
-
-<p>a) Run the following command:</p>
-
-<p><code>bash
-cd devvit-docs/scripts
-node editOpenApi.js
-</code></p>
-
-<p>b) After that script is finished running you should have unstaged changes. Commit these changes, submit a PR.</p>
-
-<p>c) Once PR is approved and comments are addressed, go to <a href="https://reddit.enterprise.slack.com/archives/C02E3NJMG2E">#devplatform-salon</a> on Slack and release your PR by using @Harold to acquire a turn in merging your changes</p></li>
-</ol>
-<h1>How apps work</h1>
+<html><body><h1>How apps work</h1>
 
 <p>Devvit apps are designed to interact with Reddit communities.</p>
 
@@ -1311,16 +1222,6 @@ xxlarge = 24px;</p>
 </blockquote>
 
 <h2>Type declaration</h2>
-
-<h3>~~state?~~</h3>
-
-<blockquote>
-  <p><code>optional</code> <strong>state</strong>: <a href="../../../../../../type-aliases/JSONObject.md"><code>JSONObject</code></a></p>
-</blockquote>
-
-<h4>Deprecated</h4>
-
-<p>use UIClient.webview.postMessage()</p>
 
 <h3>url</h3>
 
@@ -56617,7 +56518,7 @@ The Developer Platform team reviews and approves apps and their products before 
 
 <p>Press control and spacebar (ctrl+space) to suggest code completions at the cursor position. This is a great way to explore the available APIs when dotting off an object.</p>
 
-<p><img src="./assets/play/code_completion.png" alt="Code completion for &lt;code&gt;md5-1e0ce47467d1aa67436645c6fcc17a67&lt;/code&gt;." /></p>
+<p><img src="./assets/play/code_completion.png" alt="Code completion for &lt;code&gt;md5-94dfa0c1b9ccbc99957453c194d00b05&lt;/code&gt;." /></p>
 
 <h2>Type-checking​</h2>
 
@@ -56910,9 +56811,9 @@ devvit publish --public
 <p>:::note
 Make sure you don’t break subreddit rules or sitewide content policies when promoting your app on Reddit.
 :::</p>
-<h1>Reddit Developer Funds</h1>
+<h1>Reddit Developer Funds 2025</h1>
 
-<p><a href="https://developers.reddit.com/create-account">Sign up when you create an account!</a> Reddit Developer Funds is a rewards program for adventurous devs who build successful <a href="https://developers.reddit.com/docs/interactive_posts">interactive posts</a> and mod tools on Reddit.</p>
+<p>Reddit developer funds is a way for developers to earn money for the apps they build.</p>
 
 <h2>What we’re looking for</h2>
 
@@ -56920,49 +56821,48 @@ Make sure you don’t break subreddit rules or sitewide content policies when pr
 
 <ul>
 <li>A new experience, like a <a href="https://developers.reddit.com/docs/showcase/apps#live-scores">live score board</a> or <a href="https://developers.reddit.com/docs/showcase/apps#bingo">community bingo</a></li>
-<li>An entirely new community created around the app, like <a href="https://www.reddit.com/r/Pixelary/">r/pixelary</a></li>
+<li>An entirely new community created around the app, like <a href="https://www.reddit.com/r/Pixelary/">r/pixelary</a> or <a href="https://www.reddit.com/r/riddonkulous/">r/riddonkulous</a></li>
 <li>A quality of life improvement that benefits hundreds of subreddits</li>
 </ul>
 
 <h2>How it works</h2>
 
-<p>The Developer Funds program will run from July 1, 2024 - Dec 31, 2024. This program is focused on reach, and success will be measured by Qualified Views, Qualified Members, and Qualified Installs, defined as:</p>
+<p>The Reddit Developer Funds 2025 program (the “Program”) will run from April 1, 2025 - Dec 31, 2025. The Program is focused on reach, and success will be measured by Daily Qualified Engagers and Qualified Installs defined as:</p>
 
 <ul>
-<li><p>A "Qualified Member" is a subscriber of a new app-centric community that: 1) is a real user in good standing; 2) is not a bot, alt, or programmatic account; 3) has joined the community of their own volition and interest in the community.</p></li>
-<li><p>A “Qualified View” is a view of your App that: 1) occurs after July 1, 2024; 2) lasts at least two seconds; 3) is in a subreddit that has a minimum of 1,000 members; and 4) is in a subreddit or on content that is eligible for monetization under Reddit’s Contributor Monetization Policy (e.g., that is Safe for Work).</p></li>
-<li><p>A “Qualified Install” means that a subreddit has your App installed and that subreddit: 1) has a minimum of 1,000 members; and 2) is eligible for monetization under Reddit’s Contributor Monetization Policy (e.g., that is Safe for Work).</p></li>
+<li><p>A “Qualified Install” means that a subreddit has your app installed and that subreddit: 1) has a minimum of 1,000 members, and 2) is eligible for monetization under Reddit’s Earn Policy (e.g., that is Safe for Work).</p></li>
+<li><p>A “Daily Qualified Engager” is a unique user that clicks and takes an action in your App for a specific day that: 1) occurs after April 1, 2025; 2) is logged in; 3) is in a subreddit that has a minimum of 200 members, and 4) is in a subreddit or on content that is eligible for monetization under Reddit’s Earn Policy (e.g., that is Safe for Work).</p></li>
 </ul>
 
 <p>Measurement and eligibility are further defined in our terms. Please reference our <a href="https://support.reddithelp.com/hc/en-us/articles/27958169342996">terms</a> when evaluating your app performance.</p>
 
-<h2>What you can get</h2>
+<h2>Awards</h2>
 
-<p>The "Qualified Members" rewards are cumulative, which means you’ll get paid for each threshold tier your app achieves.</p>
+<p>| Tier              | Threshold                          | Payout  | Cumulative Payout |
+| :---------------- | :--------------------------------- | :------ | :---------------- |
+| Tier 1 - Engagers | 500 daily qualified engagers       | $500    | $500              |
+| Tier 2 - Engagers | 1,000 daily qualified engagers     | $1,000  | $1,500            |
+| Tier 3 - Engagers | 10,000 daily qualified engagers    | $5,000  | $6,500            |
+| Tier 4 - Engagers | 50,000 daily qualified engagers    | $10,000 | $16,500           |
+| Tier 5 - Engagers | 250,000 daily qualified engagers   | $25,000 | $41,500           |
+| Tier 6 - Engagers | 1,000,000 daily qualified engagers | $75,000 | $116,500          |</p>
 
-<p>| Tier             | Threshold                                                           | Payout | Cumulative Payout |
-| :--------------- | :------------------------------------------------------------------ | :----- | :---------------- |
-| Tier 1 - Members | 1,000 qualified members prior to 12/31/24                           | $5,000 | $5,000            |
-| Tier 2 - Members | 2,000 qualified members prior to 12/31/24 &amp; 250,000 qualified views | $5,000 | $10,000           |</p>
-
-<p>The “Qualified View” rewards are cumulative, which means you’ll get paid for each threshold tier your app achieves.</p>
-
-<p>| Tier           | Threshold                                 | Payout  | Cumulative Payout |
-| :------------- | :---------------------------------------- | :------ | :---------------- |
-| Tier 1 - Views | 10,000 qualified views within 30 days     | $500    | $500              |
-| Tier 2 - Views | 750,000 qualified views within 30 days    | $5,000  | $5,500            |
-| Tier 3 - Views | 10,000,000 qualified views within 30 days | $20,000 | $25,500           |</p>
-
-<p>The “Qualified Install” threshold is met when your app exceeds the threshold below and maintains that number of qualified installs for a consecutive 7-day period:</p>
+<p>The Daily Qualified Engagers threshold(s) are determined on a rolling seven day average, which means that the average Daily Qualified Engagers for your app over the prior seven days exceeds a given threshold.</p>
 
 <p>| Tier     | Threshold              | Payout |
 | :------- | :--------------------- | :----- |
 | Installs | 250 qualified installs | $1000  |</p>
 
+<p>The “Qualified Install” threshold is met when your app exceeds the threshold below and maintains that number of qualified installs for a consecutive 7-day period.</p>
+
+<h3>Eligibility restrictions:</h3>
+
+<p>Apps are not eligible if they previously received a payout under Developer Funds. However, if you have an app that you are excited about that previously received a payout under Developer Funds that would otherwise qualify, please reach out to us. We may consider exceptions to this restriction.</p>
+
 <h2>Program rules</h2>
 
 <ul>
-<li>After you upload your first app (a test app counts!), you'll be sent an onboarding message to let you know you qualify for the program.</li>
+<li>After you create your developer account, you'll be able to onboard <a href="https://www.reddit.com/contributor-program">here</a></li>
 <li>Apps can only qualify once for each reward tier.</li>
 <li>Don’t use spam, bots, or other forms of view manipulation, which may result in your disqualification from the program</li>
 <li>The community comes first. Apps should only be installed where relevant, useful, or enriching</li>
@@ -56980,7 +56880,7 @@ Make sure you don’t break subreddit rules or sitewide content policies when pr
 
 <h2>Tracking</h2>
 
-<p>We want developers who are interested in this program to have the right tools for success - this includes tracking how your app is performing. Once you have signed up and onboarded onto the program you will receive periodic updates over email detailing app performance once you have at least one approved app.</p>
+<p>We want developers who are interested in this program to have the right tools for success - this includes tracking how your app is performing. Once you have signed up and onboarded onto the program <a href="https://forms.gle/nywmjkvR6P6Ax2fM7">fill out this form</a> to receive regular updates on your app’s performance.</p>
 
 <h2>We’re here to help</h2>
 
